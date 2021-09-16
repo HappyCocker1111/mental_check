@@ -11,6 +11,11 @@
   </head>
 
   <body>
+    <% if user_signed_in? %>
+      <p><%= current_user.name %></p>
+    <% else %>
+      <p>サービスをご利用になる場合はログインまたは、ユーザー登録をしてください</p>
+    <% end %>
     <%= yield %>
   </body>
 </html>
